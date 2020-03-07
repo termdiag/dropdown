@@ -14,5 +14,5 @@ https://redacomm.com/?href=demo1
 
 
 ## License
-
+This code is released under the [MIT](https://github.com/termdiag/dropdown/blob/master/LICENSE) license.
 
