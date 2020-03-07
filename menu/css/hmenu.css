@@ -1,0 +1,226 @@
+/**
+    * jQuery Multi-Level horizontal dropdown menu
+    * Author: Michel Comeau
+    * email: redacomm@gmail.com
+    * URL: https:redacomm.com
+    * Version: 1.0
+ */
+ 
+/*  css for horizontal dropdown */ 
+
+
+        
+    .bottom_arrow_white_png::after {
+      position: absolute;
+      right: 4%;
+      top: 15%;  
+      content: url(../img/bottom_white.png);
+    }        
+    .right_arrow_white_png::after {
+      position: absolute;
+      right: 4%;
+      top: 30%;  
+      content: url(../img/right_white.png);
+    }        
+    .left_arrow_white_png::before {
+      position: absolute;
+      left: 4%;
+      top: 30%;  
+      content: url(../img/left_white.png);
+    }        
+    .bottom_arrow_green_png::after {
+      position: absolute;
+      right: 4%;
+      top: 15%;  
+      content: url(../img/bottom_green.png);
+    }        
+    .right_arrow_green_png::after {
+      position: absolute;
+      right: 4%;
+      top: 30%;  
+      content: url(../img/right_green.png);
+    }        
+    .left_arrow_green_png::before {
+      position: absolute;
+      left: 4%;
+      top: 30%;  
+      content: url(../img/left_green.png);
+    }   
+    .hmenu a.clicked_color { 
+    /*    outline-width: 0; */
+            color:#4bf442;          
+    }
+    .hmenu ul {    
+        background: transparent; 
+        
+/*============ pure css =================================*/ 
+/*
+            -webkit-transition: .5s;
+            transition: .5s;
+*/            
+/*=======================================================*/
+    }
+    
+    .hmenu li {                                  
+        float: left;
+        position: relative;
+        list-style: none;
+/*============ pure css =================================*/ 
+/*
+            -webkit-transition: .5s;
+            transition: .5s;
+*/            
+/*=======================================================*/
+        /*  padding between blocks */    
+        padding: 0.0em                          
+    }
+        
+    .hmenu > ul > li > a, h1 {
+        text-transform: capitalize;
+    }
+                      
+    .hmenu a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 400;        
+        
+        display: block;
+        text-decoration: none;
+/* "Top_Bottom" "Left_Right" padding */            
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 16px;
+        padding-right: 16px;
+        color: white;
+        background-color: black;
+        outline-width: 0;
+      
+    }
+.hmenu ul ul a {
+    font-size: 0.8em !important;    
+}    
+/*-------------------------------------------------------*/           
+/*      Top Menu       */     
+    .hmenu  ul li  a {  
+        
+            border-top:  1px solid #4d4d4d;
+            border-bottom:  1px solid #4d4d4d;
+            border-left:  1px solid #4d4d4d;
+    
+            border-right: 1px solid #4d4d4d;
+            border-radius: 0px; 
+            min-height: 25px;
+    }     
+
+    .hmenu ul li  {
+    }        
+/*-------------------------------------------------------*/   
+    .hmenu ul ul li {
+
+        z-index:10;
+        border-right:  1px solid #4d4d4d;
+        background-color: black;
+        padding: 0.0em;    
+    }
+
+    .hmenu  ul ul  li a {
+             border-top: none; 
+             border-bottom: 1px solid #4d4d4d;
+             border-left: 1px solid #4d4d4d;       
+             border-right: 0px solid #4d4d4d;                   
+             padding-left: 25px;               
+             background-color: black;             
+    }
+
+    .hmenu ul ul li:last-child a {
+        /*border-right: 10px solid blue;*/
+    }     
+    
+ 
+    .hmenu ul ul {
+        position: absolute;
+        left: 0%;
+        top: 100%;            
+/*============ jquery ===================================*/
+
+        display: none;
+
+/*=======================================================*/           
+
+
+/*============ pure css =================================*/ 
+/*
+        visibility: hidden;
+        opacity: 0;       
+*/           
+/*=======================================================*/             
+        
+    }    
+    .hmenu  ul ul ul {
+        left: 100%;
+        top: 0%;
+        
+    }
+    .hmenu  ul ul ul.right{
+        left: 100%;
+        top: 0%;
+        
+    }
+    .hmenu  ul ul ul.left{
+        right: 100%;
+        left: -100%;
+        top: 0%;
+        
+    }    
+
+    .hmenu ul ul li {              
+        padding-right: 0px; 
+    }     
+    
+    .hmenu ul ul a {
+        text-align: left;
+        width: 150px;                           
+    } 
+/*-------------------------------------------------------*/           
+/*      BACKGROUND       */ 
+
+    .hmenu ul > li:hover {
+        background-color: black;                 
+    }      
+/*-------------------------------------------------------*/     
+/*      FOREGROUND          */
+
+    .hmenu li:hover a {
+        color:#4bf442;   
+        background-color: #081077;   
+    }   
+    .hmenu li:hover li a {
+        color:white;                           
+    }
+    .hmenu li li:hover a {
+        color:#4bf442;
+    } 
+    .hmenu li li:hover li a{
+         color:white;
+    }              
+    .hmenu li li li:hover a {
+        color:#4bf442;
+    } 
+    .hmenu li li li:hover li a {
+        color:white
+    }         
+    .hmenu li li li li:hover a {
+        color:#4bf442;
+    }
+/*----------------------------------------------------*/    
+    .hmenu li:hover > ul {            
+        visibility: visible;
+        opacity: 1;
+    }
+          
+   .hmenu .active {
+       border: 1px solid #f1f1f1;
+       border-radius: 5px;    
+       background-color: #f1f1f1;
+   }      
+       
