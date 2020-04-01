@@ -5,7 +5,7 @@ A horizontal dropdown menu that allows for left or right sub-menu deployment.
 
 ## Demo
 
-https://redacomm.com/?href=demo1
+https://redacomm.com/#searchMenu
 
 
 ## Resources
